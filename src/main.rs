@@ -5,8 +5,8 @@ use std::collections::HashMap;
 async fn send_pushover_notification(title: &str, message: &str, priority: i32) -> Result<(), Box<dyn Error>> {
     let client = Client::new();
     let mut params = HashMap::new();
-    params.insert("token".to_string(), "token_key".to_string());
-    params.insert("user".to_string(), "user_key".to_string());
+    params.insert("token".to_string(), "token_key".to_string()); // DON'T FORGET TO UPDATE!!
+    params.insert("user".to_string(), "user_key".to_string()); // DON'T FORGET TO UPDATE!!
     params.insert("message".to_string(), message.to_string());
     params.insert("title".to_string(), title.to_string());
     params.insert("priority".to_string(), priority.to_string());
